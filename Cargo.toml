@@ -1,0 +1,41 @@
+[package]
+name = "persona-insight"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1
+
+[dependencies.anyhow]
+version = "1.0.66"
+
+[dependencies.clap]
+version = "4.0.27"
+features = ["cargo", "derive", "env", "help", "std", "string", "suggestions", "usage"]
+default-features = false
+
+[dependencies.env_logger]
+version = "0.10.0"
+
+[dependencies.log]
+version = "0.4.17"
+
+[dependencies.serde]
+version = "1.0.148"
+features = ["derive"]
+
+[dependencies.serde_json]
+version = "1.0.89"
+
+[dependencies.slack-hook]
+version = "0.8.0"
+
+[dependencies.tokio]
+version = "1.22.0"
+features = ["macros", "rt-multi-thread", "time"]
+
+[dependencies.twapi-reqwest]
+version = "0.2.3"
